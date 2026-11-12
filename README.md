@@ -23,3 +23,9 @@ You must build the executable on a Windows machine.
 1. Install the requirements:
    ```bash
    pip install -r requirements.txt
+
+2. Build the Hover Version (Option 2):
+py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hover" --add-data "logo.png;." tray_app_hover.py
+
+3. Build the Hotkey Version (Option 3):
+py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hotkey" --add-data "logo.png;." tray_app_hotkey.py

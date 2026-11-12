@@ -20,11 +20,12 @@ This template includes **two variations** of the application:
 ### Customizing the Hotkey (Hotkey Version)
 If you are using the Hotkey version (`tray_app_hotkey.py`), you can easily change the keyboard combination that shows and hides the logo.
 
-Open 'tray_app_hotkey.py' and look for the 'setup_hotkey'. Find this line:
-'''python
+Open `tray_app_hotkey.py` and look for the `setup_hotkey` function. Find this line:
+
+```python
 keyboard.add_hotkey('alt+m+r+n+y', self.toggle_visibility, suppress=False)
 
-## How to Build
+### How to Build
 You must build the executable on a Windows machine.
 
 1. Install the requirements:

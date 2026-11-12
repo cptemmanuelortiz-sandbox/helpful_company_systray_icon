@@ -41,4 +41,14 @@ You must build the executable on a Windows machine.
    ```bash
    py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hotkey" --add-data "logo.png;." tray_app_hotkey.py
 
-   
+## Example RMM Deployment Script
+
+Included in this repository is a `deploy_example.ps1` script. This demonstrates how to securely download the executable from a GitHub release and launch it invisibly via an RMM tool.
+
+Key features of the deployment script:
+- **Installs to `LOCALAPPDATA`:** Bypasses `C:\Program Files` permission errors for standard users.
+- **Cleans up old versions:** Kills the existing process before updating.
+- **Task Scheduler Launch:** Uses `Register-ScheduledTask` to force the `.exe` to open in the user's interactive desktop session, avoiding the "invisible SYSTEM session" issue common with RMM tools.
+
+## Deployment Notes (RMM)
+...   

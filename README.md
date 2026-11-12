@@ -22,20 +22,23 @@ If you are using the Hotkey version (`tray_app_hotkey.py`), you can easily chang
 
 Open `tray_app_hotkey.py` and look for the `setup_hotkey` function. Find this line:
 
-```python
-keyboard.add_hotkey('alt+m+r+n+y', self.toggle_visibility, suppress=False)
-
-### How to Build
+1. 
+   ```python
+   keyboard.add_hotkey('alt+m+r+n+y', self.toggle_visibility, suppress=False)
+   
+## How to Build
 You must build the executable on a Windows machine.
 
 1. Install the requirements:
    ```bash
    pip install -r requirements.txt
-
-2. Build the Hover Version (Option 1):
+   
+2. Build the Hover Version (Option 2):
    ```bash
    py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hover" --add-data "logo.png;." tray_app_hover.py
-
-3. Build the Hotkey Version (Option 2):
+   
+3. Build the Hotkey Version (Option 3):
    ```bash
    py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hotkey" --add-data "logo.png;." tray_app_hotkey.py
+
+   

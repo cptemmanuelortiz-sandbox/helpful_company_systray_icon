@@ -49,6 +49,3 @@ Key features of the deployment script:
 - **Installs to `LOCALAPPDATA`:** Bypasses `C:\Program Files` permission errors for standard users.
 - **Cleans up old versions:** Kills the existing process before updating.
 - **Task Scheduler Launch:** Uses `Register-ScheduledTask` to force the `.exe` to open in the user's interactive desktop session, avoiding the "invisible SYSTEM session" issue common with RMM tools.
-
-## Deployment Notes (RMM)
-...   

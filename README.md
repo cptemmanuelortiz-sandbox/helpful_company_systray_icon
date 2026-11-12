@@ -17,6 +17,13 @@ This template includes **two variations** of the application:
 1. Update `config.py` with your company's email, URLs, and brand colors.
 2. Replace `logo.png` with your company logo (recommended size: 140x140 pixels).
 
+### Customizing the Hotkey (Hotkey Version)
+If you are using the Hotkey version (`tray_app_hotkey.py`), you can easily change the keyboard combination that shows and hides the logo.
+
+Open 'tray_app_hotkey.py' and look for the 'setup_hotkey'. Find this line:
+'''python
+keyboard.add_hotkey('alt+m+r+n+y', self.toggle_visibility, suppress=False)
+
 ## How to Build
 You must build the executable on a Windows machine.
 
@@ -24,10 +31,10 @@ You must build the executable on a Windows machine.
    ```bash
    pip install -r requirements.txt
 
-2. Build the Hover Version (Option 2):
+2. Build the Hover Version (Option 1):
    ```bash
    py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hover" --add-data "logo.png;." tray_app_hover.py
 
-3. Build the Hotkey Version (Option 3):
+3. Build the Hotkey Version (Option 2):
    ```bash
    py -m PyInstaller --onefile --noconsole --name="Company_Tools_Hotkey" --add-data "logo.png;." tray_app_hotkey.py

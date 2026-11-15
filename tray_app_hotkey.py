@@ -97,7 +97,8 @@ class CompanyFloatingButton:
 
     def setup_hotkey(self):
         try:
-            keyboard.add_hotkey('alt+m+r+n+y', self.toggle_visibility, suppress=False)
+            # Changed hotkey to Ctrl + Shift + H
+            keyboard.add_hotkey('ctrl+shift+h', self.toggle_visibility, suppress=False)
             self.hotkey_registered = True
         except Exception as e:
             print(f"⚠️ Could not register hotkey: {e}")

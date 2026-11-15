@@ -106,7 +106,7 @@ class CompanyFloatingButton:
         menu = tk.Menu(self.root, tearoff=0)
         menu.add_command(label="📧 IT Support", command=self.open_support)
         menu.add_command(label="🔗 Quick Links", command=self.open_quick_links)
-        menu.add_command(label="🌐 Caminantes", command=self.open_caminantes)
+        menu.add_command(label="🌐 Company Intranet", command=self.open_intranet)
         menu.add_separator()
         menu.add_command(label="🙈 Hide", command=self.toggle_visibility)
         menu.add_command(label="❌ Exit", command=self.exit_app)
@@ -178,8 +178,8 @@ class CompanyFloatingButton:
     def open_quick_links(self):
         webbrowser.open(self.config['quick_links_url'])
 
-    def open_caminantes(self):
-        webbrowser.open(self.config['caminantes_url'])
+    def open_intranet(self):
+        webbrowser.open(self.config['intranet_url'])
 
     def create_tray_icon(self):
         try:
@@ -198,7 +198,7 @@ class CompanyFloatingButton:
                 pystray.MenuItem('👀 Show / Hide Logo', lambda: self.toggle_visibility()),
                 pystray.MenuItem('📧 IT Support', lambda: self.open_support()),
                 pystray.MenuItem('🔗 Quick Links', lambda: self.open_quick_links()),
-                pystray.MenuItem('🌐 Caminantes', lambda: self.open_caminantes()),
+                pystray.MenuItem('🌐 Company Intranet', lambda: self.open_intranet()),
                 pystray.MenuItem('---', None, enabled=False),
                 pystray.MenuItem('❌ Exit', lambda: self.exit_app()),
             )
